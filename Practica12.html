@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi primera página web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button id="menu-toggle">Menú</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>¡Nos encantaría escuchar de ti! Esperamos responder a tu consulta en un plazo de 24 horas.</p>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+
+  <h1>Bienvenido a mi primera página web</h1>
+
+  <p>Contenido de la página...</p>
+
+  <script src="script.js"></script>
+  <script>
+    // Obtener el elemento del botón de inicio
+    const inicioBtn = document.querySelector('#nav-menu ul li:first-child a');
+    
+    // Agregar un evento de clic al botón de inicio
+    inicioBtn.addEventListener('click', () => {
+      // Redireccionar a la página principal
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
